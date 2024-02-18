@@ -6,15 +6,15 @@
 # 1 of each number per column
 # 1 of each number per 6 number subgrid
 
-board = [[9,0,3,0,0,0,5,0,1],
-        [0,0,0,3,0,0,0,0,0],
-        [0,0,0,7,0,1,0,0,2],
-        [6,0,0,0,0,0,0,0,0],
-        [0,8,0,0,6,0,9,1,0],
-        [0,0,0,0,2,4,0,7,0],
-        [3,0,9,2,0,0,6,5,0],
-        [5,0,0,0,9,0,0,0,0],
-        [0,0,1,0,0,0,7,0,0]]
+# board = [[9,0,3,0,0,0,5,0,1],
+#         [0,0,0,3,0,0,0,0,0],
+#         [0,0,0,7,0,1,0,0,2],
+#         [6,0,0,0,0,0,0,0,0],
+#         [0,8,0,0,6,0,9,1,0],
+#         [0,0,0,0,2,4,0,7,0],
+#         [3,0,9,2,0,0,6,5,0],
+#         [5,0,0,0,9,0,0,0,0],
+#         [0,0,1,0,0,0,7,0,0]]
 
 
 # check if option is a valid choice
@@ -93,7 +93,11 @@ def SudokuSolver(f=0):
     print("return 4")
     return False
 
-                
+
+board=[]
+for xx in range(81):
+        board.append(int(input("Position "+str(xx)+": ")))
+
 SudokuSolver()
 for line in board:
     print(line)
