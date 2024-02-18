@@ -95,8 +95,12 @@ def SudokuSolver(f=0):
 
 
 board=[]
-for xx in range(81):
-        board.append(int(input("Position "+str(xx)+": ")))
+rowww=[]
+for xx in range(9):
+        for yy in range(9):
+            rowww.append(int(input("Position "+str(xx)+","+str(yy)+": ")))
+        board.append(rowww)
+        rowww=[]
 
 SudokuSolver()
 for line in board:
